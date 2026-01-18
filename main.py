@@ -62,7 +62,14 @@ Example:
     sum(odd) = 4, sum(even) = 2 → returns 'Odd'
 """
 def even_vs_odd(nums: list[int]) -> str:
-    return ""
+    even_sum = sum(n for n in nums if n % 2 == 0)
+    odd_sum = sum(n for n in nums if n % 2 != 0)
+
+    if even_sum > odd_sum:
+        return "Even"
+    if odd_sum > even_sum:
+        return "Odd"
+    return "Tie"
 
 
 """
