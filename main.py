@@ -32,7 +32,8 @@ Example:
     return [2, 4, 8, 22, 50, 98]
 """
 def even(nums: list[int]) -> list[int]: 
-    return []
+    evens = [n for n in nums if n % 2 == 0]
+    return sorted(evens)
 
 
 """
