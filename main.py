@@ -85,7 +85,17 @@ Example:
     is_prime(-3) → raises ValueError
 """
 def is_prime(n):
-    return False
+    if not isinstance(n, int):
+        raise ValueError
+    if n < 0:
+        raise ValueError
+    if n < 2:
+        return False
+
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
 
 
 """
