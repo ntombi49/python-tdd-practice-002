@@ -45,8 +45,8 @@ Example:
     return [27, 17, 3, 1]
 """
 def odd(nums: list[int]) -> list[int]:
-
-    return []
+    odds = [n for n in nums if n % 2 != 0]
+    return sorted(odds, reverse=True)
 
 
 """
