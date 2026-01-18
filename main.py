@@ -111,4 +111,9 @@ Hint:
     - Look at the pattern of the example carefully.
 """
 def generate_email(fullname: str, year: str, campus: str) -> str:
-    return ""
+    names = fullname.lower().split()
+    first = names[0][:2]
+    last = names[-1][:3]
+    year_part = year[-3:]
+
+    return f"{first}{last}{campus}{year_part}@student.wethinkcode.co.za"
